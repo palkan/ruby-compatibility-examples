@@ -8,7 +8,7 @@ Dir.glob("examples/**/*") do |file|
   $stdout.print "Run #{file}: "
 
   out, err, status = Open3.capture3("ruby #{file}")
-  next $stdout.puts " ✅" if status.success?
+  next $stdout.puts " ✅ #{err}" if status.success?
 
   failed = true
   $stdout.puts " 💥 #{err}"
