@@ -1,1 +1,1 @@
-invalid_hash = {x: }
+invalid_hash = {x => }
