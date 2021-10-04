@@ -1,2 +1,2 @@
-{invalid: } # :delete
+{invalid => } # :delete
 p ARGV.join(", ")
