@@ -6,7 +6,11 @@ end
 
 using(Module.new do
   refine Kernel do
-    include KernelExt
+    begin
+      import_methods KernelExt
+    rescue NoMethodError
+      include KernelExt
+    end
   end
 end)
 

@@ -9,7 +9,11 @@ end
 
 using(Module.new do
   refine B do
-    include A
+    begin
+      import_methods A
+    rescue NoMethodError
+      include A
+    end
   end
 end)
 
